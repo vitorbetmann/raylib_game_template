@@ -19,7 +19,3 @@ void SMChangeState(State *state, void *args) {
     currState->Enter(args);
   }
 }
-
-void SMUnload(void) {
-  // Unload
-}

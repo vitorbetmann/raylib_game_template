@@ -24,6 +24,5 @@ extern State *currState;
 // Prototypes
 // ----------
 void SMChangeState(State *state, void *args);
-void SMUnload(void);
 
 #endif
