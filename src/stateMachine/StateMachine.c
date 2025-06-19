@@ -1,13 +1,29 @@
+// --------------------------------------------------
+// Includes
+// --------------------------------------------------
 #include "stateMachine/StateMachine.h"
 #include <stdlib.h>
 
-// Data types
-// ----------
+// --------------------------------------------------
+// Defines
+// --------------------------------------------------
 
+// --------------------------------------------------
+// Data types
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Prototypes
+// --------------------------------------------------
+
+// --------------------------------------------------
 // Variables
-// ---------
+// --------------------------------------------------
 State *currState = NULL;
 
+// --------------------------------------------------
+// Functions
+// --------------------------------------------------
 void SMChangeState(State *state, void *args) {
   if (currState && currState->Exit) {
     currState->Exit();
@@ -17,5 +33,17 @@ void SMChangeState(State *state, void *args) {
 
   if (currState && currState->Enter) {
     currState->Enter(args);
+  }
+}
+
+void SMUpdate(float dt) {
+  if (currState && currState->Update) {
+    currState->Update(dt);
+  }
+}
+
+void SMDraw(float dt) {
+  if (currState && currState->Draw) {
+    currState->Draw();
   }
 }

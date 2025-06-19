@@ -1,20 +1,33 @@
+// --------------------------------------------------
+// Includes
+// --------------------------------------------------
 #include "stateMachine/states/ExampleState.h"
 
+// --------------------------------------------------
+// Defines
+// --------------------------------------------------
+
+// --------------------------------------------------
 // Data types
-// ----------
-State exampleState = {.id = STATE_NAME_EXAMPLE,
-                      .Enter = ExampleStateEnter,
+// --------------------------------------------------
+State exampleState = {.Enter = ExampleStateEnter,
                       .Update = ExampleStateUpdate,
                       .Draw = ExampleStateDraw,
                       .Exit = ExampleStateExit};
 
-// Variables
-// ---------
-
+// --------------------------------------------------
 // Prototypes
-// ----------
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Functions
+// --------------------------------------------------
 void ExampleStateEnter(void *args) {
-  // Check if args is of correct type or NULL
+  // Check if args is of correct type
   // Initialize stuff
 }
 
