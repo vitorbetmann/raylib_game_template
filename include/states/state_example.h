@@ -1,6 +1,5 @@
-#ifndef STATE_MACHINE_H
-#define STATE_MACHINE_H
-
+#ifndef STATE_EXAMPLE_H
+#define STATE_EXAMPLE_H
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
@@ -12,27 +11,17 @@
 // --------------------------------------------------
 // Data types
 // --------------------------------------------------
-typedef enum {
-  STATE_NAME_EXAMPLE,
-} StateID;
-
-typedef struct {
-  void (*Enter)(void *args);
-  void (*Update)(float dt);
-  void (*Draw)();
-  void (*Exit)();
-} State;
 
 // --------------------------------------------------
 // Prototypes
 // --------------------------------------------------
-void SMChangeState(State *state, void *args);
-void SMUpdate(float dt);
-void SMDraw(float dt);
+void state_example_enter(void *args);
+void state_example_update(float dt);
+void state_example_draw(void);
+void state_example_exit(void);
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-extern State *currState;
 
 #endif

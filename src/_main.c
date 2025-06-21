@@ -1,8 +1,7 @@
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
-#include "stateMachine/StateMachine.h"
-#include "stateMachine/states/ExampleState.h"
+#include "../smile_engine/include/smile.h"
 #include "stdlib.h"
 #include <raylib.h>
 
@@ -25,15 +24,16 @@
 // --------------------------------------------------
 // Program main entry point
 // --------------------------------------------------
-int main(void) {
-  InitWindow(1920, 1080, "My Game");
-  SMChangeState(&exampleState, NULL);
+extern State example_state;
+float dt;
 
-  float dt;
+int main(void) {
+  sm_change_state(&example_state, NULL);
+
   while (!WindowShouldClose()) {
     dt = GetFrameTime();
-    currState->Update(dt);
-    currState->Draw();
+    sm_update(dt);
+    sm_draw();
   }
 
   return 0;
