@@ -1,11 +1,12 @@
+#ifndef STATE_ONE_H
+#define STATE_ONE_H
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
-#include "smile.h"
-#include <raylib.h>
+#include "../../include/smile.h"
 
 // --------------------------------------------------
-// Defines
+// Other defines
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -15,29 +16,14 @@
 // --------------------------------------------------
 // Prototypes
 // --------------------------------------------------
+void state_one_enter(void *args);
+void state_one_update(float dt);
+void state_one_draw(void);
+void state_one_exit(void);
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
+extern State state_one;
 
-// --------------------------------------------------
-// Program main entry point
-// --------------------------------------------------
-float dt;
-extern State state_example;
-
-int main(void) {
-  sm_change_state(&state_example, NULL);
-
-  while (!WindowShouldClose()) {
-    dt = GetFrameTime();
-    sm_update(dt);
-    sm_draw();
-  }
-
-  return 0;
-}
-
-// --------------------------------------------------
-// Functions
-// --------------------------------------------------
+#endif

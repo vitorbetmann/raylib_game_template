@@ -55,3 +55,14 @@ endif()
 target_include_directories(${PROJECT_NAME} PRIVATE "${RAYLIB_SRC_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_directories(${PROJECT_NAME} PRIVATE "${RAYLIB_LIB_PATH}")
 target_link_libraries(${PROJECT_NAME} PRIVATE "raylib")
+
+# --------------------------------------------
+# SMILE Engine
+# -------------------------------------------- 
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/smile_engine/include
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/smile_engine/build/libsmile.a
+)

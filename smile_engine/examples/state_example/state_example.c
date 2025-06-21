@@ -1,8 +1,8 @@
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
-#include "smile.h"
-#include <raylib.h>
+#include "state_example.h"
+#include "../include/smile.h"
 
 // --------------------------------------------------
 // Defines
@@ -19,25 +19,27 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-
-// --------------------------------------------------
-// Program main entry point
-// --------------------------------------------------
-float dt;
-extern State state_example;
-
-int main(void) {
-  sm_change_state(&state_example, NULL);
-
-  while (!WindowShouldClose()) {
-    dt = GetFrameTime();
-    sm_update(dt);
-    sm_draw();
-  }
-
-  return 0;
-}
+State statePlay = {.id = "example_state",
+                   .enter = state_example_enter,
+                   .update = state_example_update,
+                   .draw = state_example_draw,
+                   .exit = state_example_exit};
 
 // --------------------------------------------------
 // Functions
 // --------------------------------------------------
+void state_example_enter(void *args) {
+  // TODO
+}
+
+void state_example_update(float dt) {
+  // TODO
+}
+
+void state_example_draw(void) {
+  // TODO
+}
+
+void state_example_exit(void) {
+  // TODO
+}
