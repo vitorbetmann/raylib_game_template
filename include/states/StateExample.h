@@ -1,9 +1,9 @@
-#ifndef STATE_ONE_H
-#define STATE_ONE_H
+#ifndef STATE_EXAMPLE_H
+#define STATE_EXAMPLE_H
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
-#include "../../include/smile.h"
+#include "smile.h"
 
 // --------------------------------------------------
 // Other defines
@@ -16,14 +16,14 @@
 // --------------------------------------------------
 // Prototypes
 // --------------------------------------------------
-void state_one_enter(void *args);
-void state_one_update(float dt);
-void state_one_draw(void);
-void state_one_exit(void);
+void StateExampleEnter(void *args);
+void StateExampleUpdate(float dt);
+void StateExampleDraw(void);
+void StateExampleExit(void);
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-extern State state_one;
+extern const State stateExample;
 
 #endif

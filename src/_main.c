@@ -3,6 +3,7 @@
 // --------------------------------------------------
 #include "smile.h"
 #include <raylib.h>
+#include <stdlib.h>
 
 // --------------------------------------------------
 // Defines
@@ -27,12 +28,12 @@ float dt;
 extern State state_example;
 
 int main(void) {
-  sm_change_state(&state_example, NULL);
+  SM_ChangeState(&state_example, NULL);
 
   while (!WindowShouldClose()) {
     dt = GetFrameTime();
-    sm_update(dt);
-    sm_draw();
+    SM_Update(dt);
+    SM_Draw();
   }
 
   return 0;

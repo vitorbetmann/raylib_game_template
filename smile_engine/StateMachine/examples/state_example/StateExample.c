@@ -1,7 +1,8 @@
 // --------------------------------------------------
 // Includes
 // --------------------------------------------------
-#include "../../include/smile.h"
+#include "StateExample.h"
+#include "../../StateMachine.h"
 
 // --------------------------------------------------
 // Defines
@@ -18,20 +19,27 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-extern State state_one;
+const State stateExample = {.id = "example",
+                            .enter = StateExampleEnter,
+                            .update = StateExampleUpdate,
+                            .draw = StateExampleDraw,
+                            .exit = StateExampleExit};
 
 // --------------------------------------------------
 // Functions
 // --------------------------------------------------
-int main(void) {
-  sm_change_state(&state_one, NULL);
-  float dt;
-  bool is_running = true;
-  while (is_running) {
-    // Get dt
-    sm_update(dt);
-    sm_draw();
-  }
+void StateExampleEnter(void *args) {
+  // TODO
+}
 
-  return 0;
+void StateExampleUpdate(float dt) {
+  // TODO
+}
+
+void StateExampleDraw(void) {
+  // TODO
+}
+
+void StateExampleExit(void) {
+  // TODO
 }
