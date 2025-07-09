@@ -25,10 +25,10 @@
 // Program main entry point
 // --------------------------------------------------
 float dt;
-extern State state_example;
+extern State stateExample;
 
 int main(void) {
-  SM_ChangeState(&state_example, NULL);
+  SM_ChangeState(&stateExample, NULL);
 
   while (!WindowShouldClose()) {
     dt = GetFrameTime();
